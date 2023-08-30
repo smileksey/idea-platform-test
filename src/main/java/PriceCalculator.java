@@ -27,18 +27,4 @@ public class PriceCalculator {
         }
     }
 
-    public static void getDifferenceBetweenAverageAndMedianPrice(List<Ticket> tickets, String originName, String destinationName) {
-        double average = getAveragePrice(tickets, originName, destinationName);
-        double median = getMedianPrice(tickets, originName, destinationName);
-
-        double difference = average - median;
-
-        if (difference > 0) {
-            System.out.println("Средняя цена больше медианной на " + difference);
-        } else if (difference < 0) {
-            System.out.println("Медианная цена больше средней на " + Math.abs(difference));
-        } else {
-            System.out.println("Средняя и медианная цены равны");
-        }
-    }
 }
